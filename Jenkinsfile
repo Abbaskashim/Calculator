@@ -21,7 +21,7 @@ pipeline {
     }
     post {
         success {
-            mail to: 'yourmail@gmail.com',
+            mail to: 'netmirrortp@gmail.com',
                  subject: 'Pipeline Success',
                  body: 'Docker image pushed successfully'
         }
