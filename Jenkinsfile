@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Image') {
             steps {
-                sh 'docker build -t abbaskashim/jenkins-demo1:latest .'
+                sh 'docker build -t abbaskashim/pipeline-docker-ci:latest .'
             }
         }
 
@@ -23,7 +23,7 @@ pipeline {
                 )]) {
                     sh '''
                       echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                      docker push abbaskashim/jenkins-demo1:latest
+                      docker push abbaskashim/pipeline-docker-ci:latest
                     '''
                 }
             }
