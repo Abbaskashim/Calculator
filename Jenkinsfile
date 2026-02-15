@@ -39,8 +39,31 @@ pipeline {
     post {
         success {
             mail to: 'netmirrortp@gmail.com',
-                 subject: 'Pipeline Success',
-                 body: 'Docker image pushed successfully'
+             subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+             body: """
+Hello Team,
+
+The Jenkins pipeline executed successfully.
+
+Job Details:
+------------------------------------
+Job Name       : ${env.JOB_NAME}
+Build Number   : ${env.BUILD_NUMBER}
+Build Status   : SUCCESS
+Build URL      : ${env.BUILD_URL}
+Executed On    : ${env.NODE_NAME}
+Workspace Path : ${env.WORKSPACE}
+
+Docker Image:
+------------------------------------
+Image Name     : abbaskashim/pipeline-docker-ci:latest
+Registry       : Docker Hub
+
+Regards,
+Jenkins CI/CD
+"""
+    }
+}
         }
     }
 }
