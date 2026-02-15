@@ -5,15 +5,18 @@ pipeline {
         stage('Clone Code') {
             steps {
                 sh '''
-                   rm -rf Calculator
-                   git clone https://github.com/Abbaskashim/Calculator.git
-               '''
+                  rm -rf Calculator
+                  git clone https://github.com/Abbaskashim/Calculator.git
+                '''
             }
         }
 
         stage('Build Image') {
             steps {
-                sh 'docker build -t abbaskashim/pipeline-docker-ci:latest .'
+                sh '''
+                  cd Calculator
+                  docker build -t abbaskashim/pipeline-docker-ci:latest .
+                '''
             }
         }
 
@@ -41,4 +44,5 @@ pipeline {
         }
     }
 }
+
 
