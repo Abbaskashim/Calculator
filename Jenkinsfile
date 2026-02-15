@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/Abbaskashim/Calculator.git'
+                sh 'git clone https://github.com/Abbaskashim/Calculator.git'
             }
         }
 
