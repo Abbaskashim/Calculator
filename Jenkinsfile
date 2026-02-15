@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'git@github.com:Abbaskashim/Calculator.git'
+                git 'https://github.com/Abbaskashim/Calculator.git'
             }
         }
         stage('Build Image') {
