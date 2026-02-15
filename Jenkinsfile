@@ -1,24 +1,35 @@
 pipeline {
     agent any
+
     stages {
         stage('Clone Code') {
             steps {
                 git 'https://github.com/Abbaskashim/Calculator.git'
             }
         }
+
         stage('Build Image') {
             steps {
                 sh 'docker build -t abbaskashim/jenkins-demo1:latest .'
             }
         }
+
         stage('Push Image') {
             steps {
-                sh '''
-                docker push abbaskashim/jenkins-demo1
-                '''
+                withCredentials([usernamePassword(
+                    credentialsId: 'dockerhub-creds',
+                    usernameVariable: 'DOCKER_USER',
+                    passwordVariable: 'DOCKER_PASS'
+                )]) {
+                    sh '''
+                      echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                      docker push abbaskashim/jenkins-demo1:latest
+                    '''
+                }
             }
         }
     }
+
     post {
         success {
             mail to: 'netmirrortp@gmail.com',
@@ -27,3 +38,4 @@ pipeline {
         }
     }
 }
+
