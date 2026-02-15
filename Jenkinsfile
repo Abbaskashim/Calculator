@@ -39,7 +39,7 @@ pipeline {
     post {
         success {
             mail to: 'netmirrortp@gmail.com',
-                 subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                 subject: 'Pipeline Success',
                  body: """
 Hello Team,
 
@@ -58,7 +58,7 @@ Docker Image:
 abbaskashim/pipeline-docker-ci:latest
 
 Regards,
-Jenkins CI/CD
+Abbas Kashim S
 """
         }
     }
