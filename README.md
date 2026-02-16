@@ -107,7 +107,7 @@ CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0"]
 ```
 ## Output :
 <img width="452" height="281" alt="image" src="https://github.com/user-attachments/assets/2a20d415-8e39-4bcf-ac64-168180008fc4" />
-
+<br>
 <br>
 <img width="452" height="251" alt="image" src="https://github.com/user-attachments/assets/eb5038ba-df4c-4292-9999-656f5e99ac92" />
 
@@ -122,8 +122,9 @@ git commit -m "jenkins-docker-ci-project"
 git remote add origin git@github.com:Abbaskashim/Calculator.git
 git push
 ```
+## Output :
 <img width="452" height="279" alt="image" src="https://github.com/user-attachments/assets/a801ad50-266f-47be-8c97-74e7981b1904" />
-
+<br>
 <br>
 <img width="452" height="279" alt="image" src="https://github.com/user-attachments/assets/8246e246-4eaa-46f0-b0b2-5a78625c6351" />
 
@@ -141,6 +142,7 @@ git push
 4.	Select Freestyle project
 5.	Click OK
 
+## Output :
 <img width="475" height="236" alt="image" src="https://github.com/user-attachments/assets/0ef11c5a-8c24-4469-843f-23d1ad841005" />
 
 ---
@@ -154,6 +156,7 @@ git push
 5.	Branch: main
 6.	Click Save
 
+## Output :
 <img width="464" height="220" alt="image" src="https://github.com/user-attachments/assets/065e0f81-9d64-43fb-ac6e-e61622bc6bf3" />
 
 ---
@@ -165,8 +168,9 @@ STEP A6: BUILD DOCKER IMAGE
 4.	Select Execute shell
 5.	Paste:``` docker build -t abbaskashim/jenkins-demo1:latest . ```
 
+## Output :
 <img width="509" height="245" alt="image" src="https://github.com/user-attachments/assets/72e75edf-5a85-4cb1-92ed-e027b9666674" />
-
+<br>
 <br>
 <img width="524" height="311" alt="image" src="https://github.com/user-attachments/assets/9c2ccbb4-cf3b-420f-8945-0e8f07aab75e" />
 
@@ -177,6 +181,7 @@ STEP A6: BUILD DOCKER IMAGE
 1.	Click Add Build Step → Execute shell
 2.	Paste: ``` docker build -t abbaskashim/jenkins-demo1:latest .```
 
+## Output :
 <img width="524" height="324" alt="image" src="https://github.com/user-attachments/assets/bff37682-7a5d-4f83-9bcf-a5c75f3927c4" />
 
 #### Docker Push Output: 
@@ -192,6 +197,7 @@ STEP A6: BUILD DOCKER IMAGE
 3.	Enable Send on success
 4.	Add your email
 
+## Output :
 <img width="523" height="306" alt="image" src="https://github.com/user-attachments/assets/bbc8ad55-e042-40bf-9b55-e683bb425b8a" />
 
 ---
@@ -200,10 +206,12 @@ STEP A6: BUILD DOCKER IMAGE
 1.	Click Build Now
 2.	Open Console Output
 
+## Output :
 <img width="524" height="310" alt="image" src="https://github.com/user-attachments/assets/4076af55-bd7c-4a5b-808d-ebd52c882243" />
 
 #### Email Notification:
 
+## Output :
 <img width="523" height="294" alt="image" src="https://github.com/user-attachments/assets/17b92688-0c47-4eaa-b828-1ef33e6cca2b" />
 
 ----
@@ -226,6 +234,7 @@ A comparison between **Freestyle Job** and **Pipeline Job** is also included.
 4. Select **Pipeline**
 5. Click **OK**
 
+## Output :
 <img width="524" height="154" alt="image" src="https://github.com/user-attachments/assets/c8049772-08bb-4a13-a7cf-9e779e4f982e" />
 
 ---
@@ -244,6 +253,7 @@ git add .
 git commit -m "Jenkin file"
 git push
 ```
+## Output :
 <img width="524" height="305" alt="image" src="https://github.com/user-attachments/assets/69694542-ff3e-4ce1-805e-7edd496cd9b5" />
 
 ----
@@ -257,6 +267,7 @@ git push
 6.	Script Path: ``` Jenkinsfile ```
 7.	Save
 
+## Output :
 <img width="524" height="280" alt="image" src="https://github.com/user-attachments/assets/496814ac-f360-4011-b8d6-21900fa3b1ef" />
 <br>
 <br>
@@ -267,6 +278,7 @@ git push
 1.	Click Build Now
 2.	Watch stages turn green
 
+## Output :
 <img width="524" height="269" alt="image" src="https://github.com/user-attachments/assets/5be3a9c3-a5c5-4c02-b73f-3e35fba352fe" />
 <br>
 <br>
@@ -277,6 +289,7 @@ git push
 1.	Email sent after successful pipeline execution
 2.	Must include job and build detail
 
+## Output :
 <img width="524" height="255" alt="image" src="https://github.com/user-attachments/assets/9a9bf510-9a81-499f-a66b-2dbeb9a7af7f" />
 
 ---
